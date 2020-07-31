@@ -15,6 +15,9 @@ function createMenuItem(name, price, category){
 
     return menuObj;
 };
+
+
+
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
 const sandwich = createMenuItem("BLT", 5, "Lunch");
@@ -25,7 +28,8 @@ const eggsBenedict = createMenuItem("Eggs Benedict", 12, "Breakfast")
 
 console.log(sandwich, soda, eggsBenedict);
 
-/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
+/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that 
+automatically calculates price given a string as a parameter. 
 
 Your method should accept: 
 
@@ -34,6 +38,24 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+/*
+STRATEGY:
+-Use for in loop to iterate over price. 
+-Use conditional to return a discount. Use this keyword to point specifically at the key price.
+*/
+
+burger.discount = function(string) {
+  for(let price in burger) {
+    if(string === "teacher" || string === "student") {
+      return this.price * 0.75;
+    } else if(string === "public") {
+      return this.price * 0.9;
+    };
+  };
+};
+
+console.log(burger.discount("student"));
 
 
 
@@ -52,10 +74,30 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 /* Task 3: Console.log just Julius' feedback */
 
 
+
+
+
+
+
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
 
+
+
+
+
+
+
+
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+
+
+
+
+
+
+
+
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -74,6 +116,15 @@ function getReviewByIndex(reviews, index) {
   }
   
 
+
+
+
+
+
+
+
+
+
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
 getLastReview should accept:
@@ -86,6 +137,19 @@ For example, if getLastReview is invoked passing the reviews array it will retur
 function getLastReview(/* code here */) {
     /* code here */
   } 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
