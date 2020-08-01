@@ -73,17 +73,17 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+
 console.log(reviews[5].feedback);
-
-
-
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
 
 
+reviews.push({name: "Austin", rating: 4.5, feedback: "Food was delicious, envioronment was inviting, but the waiter smelled funny."});
 
+console.log(reviews);
 
 
 
