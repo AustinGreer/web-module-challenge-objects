@@ -121,18 +121,6 @@ function getReviewByIndex(array, index) {
 
 
 
-  
-  
-
-
-
-
-
-
-
-
-
-
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
 getLastReview should accept:
@@ -142,9 +130,14 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
+function getLastReview(arrayOfObjects) {
+
+  getReviewByIndex(reviews, reviews.length-1);      //Used previous function and index of reviews.length-1 to get the last index. Note: this function contains the console log.
+
+
+
   } 
+  getLastReview(reviews);
 
 
 
